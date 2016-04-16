@@ -4,3 +4,6 @@
  - fix npm scripts
  - remove flow
  - add support for retry function evaluation
+
+### 0.2.2
+ - fix missing dependencies
