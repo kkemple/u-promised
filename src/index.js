@@ -2,7 +2,7 @@ function retry(retries, fn) {
   const forever = retries === -1
 
   return fn().catch((err) => {
-    if (retries <= 0 && !forever ) return Promise.reject(err)
+    if (retries <= 0 && !forever) return Promise.reject(err)
     const retriesLeft = forever ? retries : --retries
     return retry(retriesLeft, fn)
   })
