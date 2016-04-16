@@ -7,3 +7,6 @@
 
 ### 0.2.2
  - fix missing dependencies
+
+### 0.2.3
+ - update readme

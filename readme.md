@@ -20,10 +20,9 @@ Promise based retry and backoff, bring your own Promises
 
 ```javascript
 
-import highwire from '@mls-digital/highwire'
+import { get } from 'highwire'
 import { retry } from 'u-promised'
 
-const { get } = highwire()
 const fetchGoogle = () => get('http://google.com')
 
 retry(3, fetchGoogle)
@@ -61,10 +60,9 @@ retry(evalRetry(), fetchGoogle)
 
 ```javascript
 
-import highwire from '@mls-digital/highwire'
+import { get } from 'highwire'
 import { backoff } from 'u-promised'
 
-const { get } = highwire()
 const fetchGoogle = () => get('http://google.com')
 const SECOND = 1000
 

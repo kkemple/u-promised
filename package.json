@@ -1,6 +1,6 @@
 {
   "name": "u-promised",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Promise based retry and backoff, bring your own Promises",
   "main": "lib/index.js",
   "scripts": {
