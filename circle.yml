@@ -9,7 +9,10 @@ test:
   override:
     - npm run test:ci
   post:
-    - '[ "${CIRCLE_BRANCH}" = "master" ] && codeclimate-test-reporter < coverage/lcov.info'
+    - |
+        if [ master == $CIRCLE_BRANCH ]; then
+          codeclimate-test-reporter < coverage/lcov.info
+        fi
 deployment:
   npm:
     branch: master

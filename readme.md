@@ -75,8 +75,7 @@ backoff(SECOND, SECOND, -1, fetchGoogle)
   .then((google) => console.log(google))
 
 // evaluate backoff
-// evalute retry
-const evalRetry = () => {
+const evalBackoff = () => {
   let index = 0
   return () => {
     if (index === 5) return false
@@ -85,11 +84,11 @@ const evalRetry = () => {
   }
 }
 
-backoff(SECOND, SECOND, evalRetry(), fetchGoogle)
+backoff(SECOND, SECOND, evalBackoff(), fetchGoogle)
   .then((google) => console.log(google))
   .catch((err) => console.log('Oops, 6 attempts total', err))
 ```
 
 ## Developing
 
-There's really not much to this codebase. Just run `npm test`. If you would like to contribute, please first an issue explaining what you would like to change/fix/add before making a pull request.
+There's really not much to this codebase. Just run `npm test`. If you would like to contribute, please open an issue explaining what you would like to change/fix/add and make a pull request.
