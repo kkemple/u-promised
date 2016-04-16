@@ -4,8 +4,6 @@ engines:
     enabled: true
   fixme:
     enabled: true
-  config:
-    config: ./.eslintrc
 ratings:
   paths:
   - "**.js"
