@@ -2,10 +2,9 @@ machine:
   node:
     version: 4.2.6
 dependencies:
-  override:
-    - npm install
-    - npm run compile
+  post:
     - npm install -g codeclimate-test-reporter
+    - npm run compile
 test:
   override:
     - npm run test:coverage
