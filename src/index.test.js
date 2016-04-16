@@ -1,7 +1,7 @@
 import suite from 'tape'
 import sinon from 'sinon'
 
-import { retry, backoff } from '../src/index.js'
+import { retry, backoff } from './index.js'
 
 const evalRetry = () => {
   let index = 0
