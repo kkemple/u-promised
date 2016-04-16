@@ -1,0 +1,12 @@
+machine:
+  node:
+    version: 4.2.6
+dependencies:
+  post:
+    - npm run compile
+    - npm install -g codeclimate-test-reporter
+test:
+  override:
+    - npm run test:coverage
+  post:
+    - '[ "${CIRCLE_BRANCH}" = "master" ] && codecodeclimate-test-reporter < coverage/lcov.info'
