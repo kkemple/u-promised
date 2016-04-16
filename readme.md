@@ -28,7 +28,7 @@ retry(3, fetchGoogle)
 
 // retry forever
 retry(-1, fetchGoogle)
-.then((google) => console.log(google))
+  .then((google) => console.log(google))
 
 ```
 
