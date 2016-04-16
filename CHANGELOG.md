@@ -10,3 +10,7 @@
 
 ### 0.2.3
  - update readme
+
+### 0.2.4
+ - fix .npmignore
+ - update readme
