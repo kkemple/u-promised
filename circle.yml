@@ -9,4 +9,10 @@ test:
   override:
     - npm run test:coverage
   post:
-    - '[ "${CIRCLE_BRANCH}" = "master" ] && codecodeclimate-test-reporter < coverage/lcov.info'
+    - '[ "${CIRCLE_BRANCH}" = "master" ] && codeclimate-test-reporter < coverage/lcov.info'
+deployment:
+  npm:
+    branch: master
+    commands:
+      - echo -e "$NPM_USERNAME\n$NPM_PASSWORD\n$NPM_EMAIL" | npm login
+      - npm publish
