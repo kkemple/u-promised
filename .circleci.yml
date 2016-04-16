@@ -2,7 +2,8 @@ machine:
   node:
     version: 4.2.6
 dependencies:
-  post:
+  override:
+    - npm install
     - npm run compile
     - npm install -g codeclimate-test-reporter
 test:
